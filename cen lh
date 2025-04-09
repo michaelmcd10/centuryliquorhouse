@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Century Liquor House - Premium Alcohol & Catering</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background-color: #8B0000; /* Dark red */
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #6B0000;
+        }
+        
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .slider img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2 {
+            color: #8B0000;
+        }
+        
+        .order-btn {
+            display: inline-block;
+            background-color: #8B0000;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .order-btn:hover {
+            background-color: #6B0000;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            margin: 20px 0;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Replace with your actual logo -->
+            <img src="century-liquor-house-logo.png" alt="Century Liquor House Logo" class="logo">
+            <h1>Century Liquor House</h1>
+            <p>Premium Alcohol | Catering Services | Home Delivery</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#order" class="order-btn">Order Now</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="slider-container">
+            <div class="slider">
+                <!-- Replace with your actual alcohol images -->
+                <img src="alcohol-display-1.jpg" alt="Premium Alcohol Selection">
+                <img src="alcohol-display-2.jpg" alt="Wide Variety of Brands">
+                <img src="catering-setup.jpg" alt="Catering Services">
+            </div>
+        </div>
+        
+        <section id="home">
+            <h2>Welcome to Century Liquor House</h2>
+            <p>Your premier destination for all major alcohol brands. We offer an extensive selection of spirits, wines, beers, and more to satisfy every palate.</p>
+            <p>Enjoy our convenient delivery service or let us handle your next event with our professional catering solutions.</p>
+            <a href="#order" class="order-btn">Place Your Order</a>
+        </section>
+        
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Century Liquor House has been serving the community with top-quality alcohol products for years. Our knowledgeable staff can help you select the perfect drink for any occasion.</p>
+            <p>We pride ourselves on:</p>
+            <ul>
+                <li>Extensive selection of premium brands</li>
+                <li>Competitive pricing</li>
+                <li>Professional catering services</li>
+                <li>Reliable home delivery</li>
+                <li>Exceptional customer service</li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Manager:</strong> Leo Space</p>
+                <p><strong>Phone:</strong> +254 782 108 409</p>
+                <p><strong>Email:</strong> info@centuryliquor.co.ke</p>
+                <p><strong>Business Hours:</strong> Monday-Sunday, 9:00 AM - 10:00 PM</p>
+            </div>
+        </section>
+        
+        <section id="order">
+            <h2>Order Now</h2>
+            <p>Place your order for delivery or catering services:</p>
+            <!-- Replace with your actual order link -->
+            <a href="https://wa.me/254782108409" class="order-btn">Order via WhatsApp</a>
+            <p>Or call us directly at +254 782 108 409</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Century Liquor House. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+        
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
